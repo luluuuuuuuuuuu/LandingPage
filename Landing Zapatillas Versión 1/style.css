@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+/*Colors*/
+    --clr-accent: #153343;
+    --clr-accent-light: #65ad01;
+    --clr-accent-white: #ffffff;
+/*Typography*/
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+/*Font Weights*/
+    --ff-regular: 400;
+    --ff-bold: 600;
+}
+
+body {
+    width: 100vw;
+    min-height: 100%;
+    background-color: var(--clr-accent);
+    background-image: url(./images/bg-desktop.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--ff-body);
+    color: var(--clr-accent-white);
+}
+
+header {
+    padding: 10px;
+}
+
+.logo {
+    width: 262px; height: 93px;
+    position:fixed;
+    z-index: 100;
+}
+
+.hero {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-product-image {
+    width: 581px; height: 663px;
+    align-items: center;
+    position: relative;
+    display: flex;
+
+}
+
+.hero-content {
+    width: 45%;
+    margin-top: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.hero-title {
+    font-family: var(--ff-heading);
+    font-weight: var(--ff-bold);
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-weight: var(--ff-regular);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin: 10px;
+    padding-right: 100px;
+    font-weight: var(--ff-regular);
+    font-size: 1.4rem;
+    
+}
+
+.hero-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--clr-accent-white);
+    color: var(--clr-accent);
+    font-size: 1.4rem;
+    bottom: 0;
+    width: 35%;
+    height: 50px;
+}
+
+.hero-button:hover {
+    background-color: var(--clr-accent-light);
+    color: var(--clr-accent-white);
+}
+
+.social-media {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.fa {
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: 2px solid var(--clr-accent-white);
+    border-radius: 50%;
+    padding: 15px;
+    margin: 5px;
+
+}
+
+.fa-instagram {
+    margin: 0 10px;
+    margin: 5px;
+}
+
+.fa-facebook {
+    padding: 15px 18px ;
+    margin: 5px;
+}
+
+.fa-twitter {
+    margin: 0 10px;
+    margin: 5px;
+}
+
+.fa:hover {
+    border-color: var(--clr-accent-light);
+    color: var(--clr-accent-light);
+    cursor: pointer;
+}
+
+/*The code below is to make the website responsive on mobile*/
+@media (max-width: 850px) {
+    body {
+        background-image: url(./images/bg-mobile.png); 
+        min-height: 100%;
+        /*width: 100vw;  */  
+    }
+    .hero {
+        flex-direction: column;    
+    }
+
+    .logo {
+        width: 87.3px; height: 31px;
+        align-items: center;
+        position:fixed;
+        z-index: 100;
+    }
+
+    .main-product-image {
+        width: 80%; height: 80%;
+        align-content: center;  
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 80px;
+    }
+
+    .hero-content {
+        width: 100%;
+        align-content: center;  
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .hero-description {
+        align-items: center;
+        text-align: center;
+    }
+
+    .field {
+        margin: 2px;
+        padding-right: 5px;
+        font-weight: var(--ff-regular);
+        font-size: 1.4rem;
+    }
+
+    .hero-button {
+        width: 60%;
+        align-content: center;
+        left: 500px;
+        height: 50px;
+    }
+
+
+    .social-media {
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: 30px;
+    }
+
+    .fa {
+        font-size: 1.4rem;
+    }
+}
